@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -123,6 +124,17 @@ public class App {
 				.max(Comparator.comparing(Person::getAge))
 				.map(Person::getName);
 		System.out.println(oldestWomen);
+
+		System.out.println("---------------------------------------------------------------------------------");
+
+		// We can get streams of a array by using this
+		String[] names = {};
+		Arrays.stream(names);
+
+		// We can use many filter as we want
+		// stream().filter().filter()
+
+		// map() is use to transform the datatype to another
 
 	}
 
