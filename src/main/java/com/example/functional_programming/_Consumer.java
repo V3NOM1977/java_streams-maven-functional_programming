@@ -3,11 +3,11 @@ package com.example.functional_programming;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-public class ConsumerInerfaceExample {
+public class _Consumer {
 
-    private static final Consumer<User> greetUser = user -> System.out.println("Hello " + user.getName());
+    private static final Consumer<User> greetUserConsumer = user -> System.out.println("Hello " + user.getName());
 
-    private static final BiConsumer<User, Boolean> greetUserWithAge = (user, bool) -> System.out.println(
+    private static final BiConsumer<User, Boolean> greetUserWithAgeConsumer = (user, bool) -> System.out.println(
             "Hello " + user.getName() + ", " +
                     "your age is " + (bool ? user.getAge() : "**"));
 
@@ -35,11 +35,11 @@ public class ConsumerInerfaceExample {
     public static void main(String[] args) {
         User user = new User("Rishabh Rawat", 23);
 
-        greetUser.accept(user);
+        greetUserConsumer.accept(user);
 
         System.out.println("---------------------------------------------------------------------------------");
 
-        greetUserWithAge.accept(user, false);
+        greetUserWithAgeConsumer.accept(user, false);
     }
 
 }
