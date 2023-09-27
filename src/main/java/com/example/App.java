@@ -134,8 +134,20 @@ public class App {
 		// We can use many filter as we want
 		// stream().filter().filter()
 
+		System.out.println("---------------------------------------------------------------------------------");
 		// map() is use to transform the datatype to another
+		people.stream()
+				.map(person1 -> person1.getGender())
+				.collect(Collectors.toSet());
 
+		System.out.println("--------------------------");
+
+		people.stream()
+				.map(Person::getName)
+				.mapToInt(String::length)
+				.forEach(System.out::println);
+
+		System.out.println("---------------------------------------------------------------------------------");
 	}
 
 	private static List<Person> getPeople() {
