@@ -7,7 +7,8 @@ public class Lambdas {
     public static void main(String[] args) {
 
         Function<String, String> upperCaseName1 = name -> {
-            if(name.isBlank()) throw new IllegalStateException("Name cant blank");
+            if (name.isBlank())
+                throw new IllegalStateException("Name cant blank");
             return name.toUpperCase();
         };
 
